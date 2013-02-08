@@ -29,6 +29,6 @@ public class JAttachment extends JContent {
     
     @Override
     public String toString() {
-        return super.getTitle();
+        return "Attachment: " + super.getTitle() + "\n" + super.getDescription();
     }
 }

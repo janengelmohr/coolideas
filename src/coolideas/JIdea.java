@@ -69,7 +69,7 @@ public class JIdea extends JContent {
     
     abstract class JState{
     private JValuation valuation;
-    private String currentDiscussion;
+    private String currentDiscussion="";
         public void discuss(String text) {
             currentDiscussion = text;
         }
@@ -101,7 +101,7 @@ public class JIdea extends JContent {
     class OpenDraft extends JState {
         @Override
         public void discuss(String text) {
-            super.currentDiscussion = text;
+            super.currentDiscussion = super.currentDiscussion + text + "\n";
         }
         @Override
         public void evaluate(JValuation valuation) {

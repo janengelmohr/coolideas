@@ -21,6 +21,7 @@ public class JTopic extends JContent {
         return id;
     }
     
+    @Override
     public String toString() {
         return super.getTitle();
     }

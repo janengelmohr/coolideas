@@ -66,10 +66,12 @@ public class JIdeaPool {
     }
     
     public int numberOfIdeas() {
-        int counter = 0;
-        for(Set<JIdea> ideas : pool.values()) {
-            counter =+ ideas.size();
-        }
-        return counter;
+        Set<JIdea> s = new HashSet<JIdea>();
+		
+		for (Entry<JTopic, Set<JIdea>> t : pool.entrySet()) {
+	        s.addAll(t.getValue());
+		}
+		
+		return s.size();
     }
 }
